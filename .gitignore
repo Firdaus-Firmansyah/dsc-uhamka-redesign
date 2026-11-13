@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.next-dev/
+.figma-transfers/
+.figma-transfer.b64
+out/
+*.tsbuildinfo
+test-results/
+playwright-report/
+.env*

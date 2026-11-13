@@ -1,0 +1,2 @@
+export type Division = 'The Pixels' | 'The Vectors' | 'The Cyphers';
+export interface Event { slug: string; title: string; shortTitle: string; division: Division; format: string; kind: string; start: string; end: string; dateOnly?: boolean; image: string; description: string; location: string; registrationUrl: string | null; registration: 'open' | 'waitlist' | 'closed'; tags: string[]; prerequisites: string[]; agenda: {time: string; title: string; description: string}[]; speakers: {name: string; role: string; image: string}[]; gallery: string[]; }

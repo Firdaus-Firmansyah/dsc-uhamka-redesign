@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Can non-IT students or those from outside the Faculty of Engineering join?",
+    "answer": "Absolutely! DSC UHAMKA is open to active UHAMKA students from any major or faculty. Technology belongs to everyone who wants to learn.",
+    "category": "General"
+  },
+  {
+    "question": "Is there a registration fee to become a member?",
+    "answer": "Registration and membership for DSC Uhamka are completely free of charge.",
+    "category": "Recruitment"
+  },
+  {
+    "question": "I cannot code at all yet, can I still join?",
+    "answer": "Yes, you can! Peer-to-peer learning is at the heart of DSC UHAMKA. Start with beginner-friendly sessions and grow alongside the community.",
+    "category": "General"
+  },
+  {
+    "question": "What are the benefits of joining DSC UHAMKA?",
+    "answer": "You will gain technical skills, networking opportunities, and access to Google developer resources.",
+    "category": "General"
+  },
+  {
+    "question": "What learning divisions are available?",
+    "answer": "Explore three focus areas: The Pixels (UI/UX & Creative), The Vectors (Web & Mobile Development), and The Cyphers (Cloud & Security). Choose what sparks your interest.",
+    "category": "General"
+  },
+  {
+    "question": "What is the difference between a Member and the Core Team?",
+    "answer": "Members attend events and workshops. The Core Team organizes activities and manages community operations. Watch our community channels for recruitment announcements.",
+    "category": "Recruitment"
+  },
+  {
+    "question": "Will DSC activities interfere with my college schedule?",
+    "answer": "We try to schedule our activities during spare time or weekends to avoid clashing with academic hours.",
+    "category": "Events & Certificates"
+  },
+  {
+    "question": "How do I get an event certificate?",
+    "answer": "Certificate requirements depend on the event. Usually, participants need to register, attend the session, and complete the attendance or feedback form. Check the event announcement for details.",
+    "category": "Events & Certificates"
+  },
+  {
+    "question": "Is the certificate from DSC UHAMKA recognized?",
+    "answer": "Our certificates acknowledge your participation in events backed by a Google-supported community, which is great for your portfolio.",
+    "category": "Events & Certificates"
+  },
+  {
+    "question": "How can I partner or collaborate with DSC UHAMKA?",
+    "answer": "We welcome collaborations! Send your proposal to gdscuhamka@gmail.com or contact @dsc.uhamka on Instagram.",
+    "category": "Collaboration"
+  }
+]

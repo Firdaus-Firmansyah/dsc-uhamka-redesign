@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "mastering-figma-workflow",
+    "title": "Mastering Figma Workflow & Design System with Kretya Studio",
+    "shortTitle": "Good design is a system. Not just a screen.",
+    "division": "The Pixels",
+    "format": "Online",
+    "kind": "Tech talk & workshop",
+    "start": "2026-07-18T09:00:00+07:00",
+    "end": "2026-07-18T11:00:00+07:00",
+    "image": "/images/ThePixels.png",
+    "description": "Go behind the scenes of a professional design studio. Explore real-world UI/UX workflows and build consistent, scalable interfaces with Figma variables, components, and Auto Layout.",
+    "location": "Online · Google Meet",
+    "registrationUrl": "https://forms.gle/XcRx2AhFZpP75L82A",
+    "registration": "open",
+    "tags": [
+      "Figma",
+      "UI/UX",
+      "Design systems"
+    ],
+    "prerequisites": [
+      "Sign in to your Figma account on a laptop or PC.",
+      "Get familiar with frames, basic shapes, and text tools.",
+      "Duplicate the starter kit shared with registered participants.",
+      "Bring a stable internet connection and a curious mindset."
+    ],
+    "agenda": [
+      {
+        "time": "09:00",
+        "title": "Welcome & introductions",
+        "description": "Meet the community and get ready for the session."
+      },
+      {
+        "time": "09:10",
+        "title": "Inside a design studio",
+        "description": "Discover professional workflows with the Kretya Studio team."
+      },
+      {
+        "time": "09:45",
+        "title": "Build a mini design system",
+        "description": "A hands-on exploration of variables, components, and Auto Layout."
+      },
+      {
+        "time": "10:35",
+        "title": "Showcase, Q&A & closing",
+        "description": "Share your work, ask questions, and wrap up together."
+      }
+    ],
+    "speakers": [
+      {
+        "name": "Ahmad Fauzi",
+        "role": "Creative Director · Kretya Studio",
+        "image": "/images/Ahmad.png"
+      },
+      {
+        "name": "Rizki Fadhilah Muhammad Habibi",
+        "role": "UX Director · Kretya Studio",
+        "image": "/images/Rizki.png"
+      },
+      {
+        "name": "Bimbi Elsabathi",
+        "role": "Moderator · DSC UHAMKA",
+        "image": "/images/Bimbiii.png"
+      }
+    ],
+    "gallery": []
+  },
+  {
+    "slug": "crash-course-uiux",
+    "title": "Crash Course UI/UX Design",
+    "shortTitle": "Bikin bukan asal bikin.",
+    "division": "The Pixels",
+    "format": "Online",
+    "kind": "Crash course",
+    "start": "2025-05-30T00:00:00+07:00",
+    "end": "2025-05-31T00:00:00+07:00",
+    "image": "/images/CrashCourse.png",
+    "description": "Explore user-centered design: the difference between UI and UX, empathy for users, and how designers turn real problems into thoughtful solutions. A community crash course with DSC UHAMKA instructors and a guest practitioner.",
+    "location": "Online · Google Meet",
+    "registrationUrl": null,
+    "registration": "closed",
+    "tags": [
+      "UI/UX",
+      "Figma",
+      "Design fundamentals"
+    ],
+    "prerequisites": [],
+    "agenda": [],
+    "speakers": [],
+    "gallery": [
+      "/images/CC1.png",
+      "/images/CC2.png",
+      "/images/CC3.webp",
+      "/images/CC4.webp",
+      "/images/CC5.webp",
+      "/images/CC6.webp",
+      "/images/CC7.webp",
+      "/images/CC8.webp"
+    ],
+    "dateOnly": true
+  },
+  {
+    "registrationUrl": null,
+    "registration": "closed",
+    "prerequisites": [],
+    "agenda": [],
+    "gallery": [],
+    "slug": "data-storytelling-tableau",
+    "title": "Data Storytelling: Ultimate Tricks for Data Visualization Using Tableau",
+    "shortTitle": "Make your data tell a story.",
+    "division": "The Vectors",
+    "format": "Online",
+    "kind": "Tech talk",
+    "start": "2026-06-27T13:00:00+07:00",
+    "end": "2026-06-27T16:00:00+07:00",
+    "image": "/images/Tableau.png",
+    "description": "Turn spreadsheet rows into clear, interactive stories. Explore Tableau Public, dimensions and measures, charts, maps, and dashboards with Dicky Lihardo Girsang.",
+    "location": "Online · Google Meet",
+    "tags": [
+      "Tableau",
+      "Data analytics",
+      "Data visualization"
+    ],
+    "speakers": [
+      {
+        "name": "Dicky Lihardo Girsang",
+        "role": "Data Science Indonesia · Data Analyst Flight at Traveloka",
+        "image": "/images/Dicky.png"
+      },
+      {
+        "name": "Fayza Nadya",
+        "role": "Moderator · The Vectors",
+        "image": "/images/fayza.webp"
+      }
+    ]
+  },
+  {
+    "registrationUrl": null,
+    "registration": "closed",
+    "prerequisites": [],
+    "agenda": [],
+    "gallery": [],
+    "slug": "beyond-the-surface",
+    "title": "Beyond the Surface: Bypassing Defenses & Gaining Persistence",
+    "shortTitle": "Understand vulnerabilities. Build stronger defenses.",
+    "division": "The Cyphers",
+    "format": "Offline",
+    "kind": "Study jam",
+    "start": "2026-05-23T13:00:00+07:00",
+    "end": "2026-05-23T16:00:00+07:00",
+    "image": "/images/Pentest.png",
+    "description": "A community study jam on web application security with Yumansyah Nurnidar. Explore vulnerability analysis, security testing concepts, and secure coding practices in an educational workshop setting.",
+    "location": "Lab 1 · FTII UHAMKA Campus F, Ciracas",
+    "tags": [
+      "Web security",
+      "Penetration testing",
+      "Secure coding"
+    ],
+    "speakers": [
+      {
+        "name": "Yumansyah Nurnidar",
+        "role": "Koordinator ACT Region Bekasi",
+        "image": "/images/Yumansyah.png"
+      },
+      {
+        "name": "Deeta Zamel Aulia",
+        "role": "Moderator · The Cyphers",
+        "image": "/images/deta.webp"
+      }
+    ]
+  }
+]
