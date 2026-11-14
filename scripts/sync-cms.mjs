@@ -31,4 +31,8 @@ async function main() {
   await rename('src/content/cms-index.json.tmp','src/content/cms-index.json');
   console.log(`Synced ${content.length} pages from Google Sheets.`);
 }
-main().catch(error => { console.error(error.message?.startsWith('error:') ? 'CMS authentication failed.' : error.message); process.exitCode = 1; });
+main().catch(() => {
+  // Provider/JSON parser errors can contain credential or response fragments.
+  console.error('CMS sync failed. Check GOOGLE_SHEET_ID, service-account credentials, sharing permissions, required sheet columns and network access.');
+  process.exitCode = 1;
+});
