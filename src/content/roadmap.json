@@ -1,0 +1,6 @@
+[
+  {"title":"Find your community","date":"Stage 01","description":"Meet fellow learners, explore the divisions, and choose a topic that sparks your curiosity.","status":"planned","href":"/divisions"},
+  {"title":"Learn by doing","date":"Stage 02","description":"Choose a study jam or workshop from the event archive and start practicing the fundamentals.","status":"planned","href":"/events"},
+  {"title":"Build something together","date":"Stage 03","description":"Turn an idea into a small project with peers. Share what works, ask questions, and iterate.","status":"planned","href":"/faq"},
+  {"title":"Share your progress","date":"Stage 04","description":"Show the community what you learned and help the next learner take their first step.","status":"planned","href":"/team"}
+]

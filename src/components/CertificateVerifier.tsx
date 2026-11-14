@@ -1,0 +1,7 @@
+'use client';
+import {useState,type FormEvent} from 'react';
+export default function CertificateVerifier(){
+ const [id,setId]=useState(''),[result,setResult]=useState(''),[busy,setBusy]=useState(false);
+ async function verify(event:FormEvent){event.preventDefault();setBusy(true);setResult('');try{const response=await fetch(`/api/certificate/verify/${encodeURIComponent(id.trim())}`,{signal:AbortSignal.timeout(15000)});const data=await response.json();if(!response.ok)throw new Error(data.error||'Verification unavailable.');setResult(data.valid?`Verified certificate · Issued ${new Intl.DateTimeFormat('en-GB',{dateStyle:'long',timeZone:'Asia/Jakarta'}).format(new Date(data.details.issued_at))}`:'Certificate not found or revoked. Check the ID and try again.')}catch(error){setResult(error instanceof Error?error.message:'Verification unavailable.')}finally{setBusy(false)}}
+ return <form className="feature-card service-form" onSubmit={verify}><label htmlFor="certificate-id">Certificate ID</label><input id="certificate-id" value={id} onChange={e=>{setId(e.target.value);setResult('')}} required maxLength={36} pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" autoComplete="off" spellCheck={false} disabled={busy}/><p className="fine-print">Find the unique ID on your certificate. Email addresses are never displayed.</p><button className="button primary" disabled={busy}>{busy?'Checking…':'Verify certificate'}</button><p role="status" aria-live="polite">{result}</p></form>;
+}

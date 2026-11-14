@@ -1,0 +1,6 @@
+.env*
+secrets/
+test-results/
+playwright-report/
+.figma-transfers/
+.figma-transfer.b64

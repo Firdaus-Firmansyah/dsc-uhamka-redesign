@@ -1,9 +1,18 @@
 import type { NextConfig } from 'next';
 
 const config: NextConfig = {
-  output: 'export',
   images: { unoptimized: true },
   poweredByHeader: false,
+  async headers() {
+    return [{ source: '/(.*)', headers: [
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'X-Frame-Options', value: 'DENY' },
+      { key: 'X-XSS-Protection', value: '0' },
+      { key: 'Permissions-Policy', value: 'geolocation=(), microphone=(), camera=()' },
+      { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+    ] }];
+  },
 };
 
 export default config;
