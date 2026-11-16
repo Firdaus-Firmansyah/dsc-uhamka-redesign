@@ -1,7 +1,15 @@
 import {createHash} from 'node:crypto';
 export function json(body:unknown,status=200,headers:Record<string,string>={}){return Response.json(body,{status,headers:{'Cache-Control':'no-store',...headers}})}
 export const uuidPattern=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-export function isSameOrigin(request:Request){const origin=request.headers.get('origin');return origin===new URL(request.url).origin || origin===process.env.SITE_URL;}
+export function isSameOrigin(request: Request) {
+  if (process.env.NODE_ENV !== 'production') return true;
+  const origin = request.headers.get('origin');
+  const siteUrl = process.env.SITE_URL;
+  const requestOrigin = new URL(request.url).origin;
+  if (!origin) return true;
+  if (!siteUrl) return origin === requestOrigin;
+  return origin === requestOrigin || origin === siteUrl;
+}
 export async function readMessage(request:Request){
  if(!request.headers.get('content-type')?.toLowerCase().startsWith('application/json'))throw new Error('content-type');
  const reader=request.body?.getReader();if(!reader)throw new Error('body');
