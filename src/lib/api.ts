@@ -2,11 +2,10 @@ import {createHash} from 'node:crypto';
 export function json(body:unknown,status=200,headers:Record<string,string>={}){return Response.json(body,{status,headers:{'Cache-Control':'no-store',...headers}})}
 export const uuidPattern=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export function isSameOrigin(request: Request) {
-  if (process.env.NODE_ENV !== 'production') return true;
   const origin = request.headers.get('origin');
+  if (!origin) return true;
   const siteUrl = process.env.SITE_URL;
   const requestOrigin = new URL(request.url).origin;
-  if (!origin) return true;
   if (!siteUrl) return origin === requestOrigin;
   return origin === requestOrigin || origin === siteUrl;
 }
@@ -19,10 +18,15 @@ export async function readMessage(request:Request){
  if(!body||typeof body.message!=='string'||!body.message.trim()||body.message.trim().length>2000)throw new Error('message');
  return body.message.trim() as string;
 }
-// Shared Redis counters work across Vercel instances. Production fails closed if absent.
+// Shared Redis counters work across Vercel instances. Production fails closed if absent for certificates.
 export async function rateLimit(request:Request,scope:string,limit:number):Promise<Response|null>{
  const url=process.env.UPSTASH_REDIS_REST_URL,token=process.env.UPSTASH_REDIS_REST_TOKEN;
- if(!url||!token)return null;
+ if(!url||!token){
+   if(scope==='certificate'&&process.env.NODE_ENV==='production'){
+     return json({error:'Service temporarily unavailable.'},503);
+   }
+   return null;
+ }
  const ip=request.headers.get('x-vercel-forwarded-for')?.split(',')[0]?.trim()||'unknown';
  const hash=createHash('sha256').update(ip).digest('hex').slice(0,24);
  const bucket=Math.floor(Date.now()/60000);const key=`dsc:${scope}:${hash}:${bucket}`;
