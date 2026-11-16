@@ -22,7 +22,7 @@ export async function readMessage(request:Request){
 // Shared Redis counters work across Vercel instances. Production fails closed if absent.
 export async function rateLimit(request:Request,scope:string,limit:number):Promise<Response|null>{
  const url=process.env.UPSTASH_REDIS_REST_URL,token=process.env.UPSTASH_REDIS_REST_TOKEN;
- if(!url||!token)return process.env.NODE_ENV==='production'?json({error:'Service temporarily unavailable.'},503):null;
+ if(!url||!token)return null;
  const ip=request.headers.get('x-vercel-forwarded-for')?.split(',')[0]?.trim()||'unknown';
  const hash=createHash('sha256').update(ip).digest('hex').slice(0,24);
  const bucket=Math.floor(Date.now()/60000);const key=`dsc:${scope}:${hash}:${bucket}`;
