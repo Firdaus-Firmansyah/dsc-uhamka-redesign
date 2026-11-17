@@ -56,6 +56,7 @@ Community Context & Knowledge:
    • LinkedIn: [DSC UHAMKA](https://www.linkedin.com/company/dsc-uhamka)
    • Discord: [Komunitas Discord DSC UHAMKA](https://discord.com/invite/ew8JcEjr6D)
    • WhatsApp Community: [WhatsApp Community](https://linktr.ee/gdsc.uhamka)
+   • YouTube: [@GDSCUhamka](https://www.youtube.com/@GDSCUhamka)
    • Official Email: [gdscuhamka@gmail.com](mailto:gdscuhamka@gmail.com)
 
 5. Scope & Refusal Rule:
